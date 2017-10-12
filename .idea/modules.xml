@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Zbf_ChartView.iml" filepath="$PROJECT_DIR$/Zbf_ChartView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Zbf_ChartView.iml" filepath="$PROJECT_DIR$/.idea/Zbf_ChartView.iml" />
+      <module fileurl="file://C:\Users\hs-301\Desktop\demo\Zbf_ChartView\Zbf_ChartView.iml" filepath="C:\Users\hs-301\Desktop\demo\Zbf_ChartView\Zbf_ChartView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
