@@ -4,10 +4,10 @@
              android:layout_height="match_parent"
              tools:context="com.example.administrator.zbf_chartview.BlankFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="zbf is the best"/>
+        android:layout_height="match_parent"/>
+
 
 </FrameLayout>

@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity implements BlankFragment.OnFragmentInteractionListener, BlankFragment2.OnFragmentInteractionListener
+public class MainActivity extends AppCompatActivity
 {
     private LinearLayout ln_replace;
 
@@ -107,8 +107,4 @@ public class MainActivity extends AppCompatActivity implements BlankFragment.OnF
     }
 
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 }
