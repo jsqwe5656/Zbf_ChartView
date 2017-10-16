@@ -28,6 +28,7 @@ import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,9 +63,13 @@ public class BlankFragment extends Fragment implements OnChartGestureListener, O
 
     private List<Entry> spo2;                   //血氧数据
 
+    private List<Entry> heart;                  //心跳数据
 
+    private List<Entry> resp;                   //呼吸率数据
 
+    private List<Entry> plus;                   //脉搏数据
 
+    private List<Entry> temperature;            //体温数据
 
 
     /**
@@ -89,17 +94,20 @@ public class BlankFragment extends Fragment implements OnChartGestureListener, O
      * 初始化具体折线图数值
      */
     private void chartDataInit() {
-/*        for (int i = 0; i < list.size(); i++)
+        dateList = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++)
         {
             ChartDatasBean bean = list.get(i);
-//            spo2.add(new Entry(list.get(i).getSpo2(),list.get(i).getDate()));
-        }*/
-        for (ChartDatasBean bean : list)
-        {
             //截取时间 HH:MM
             String date = (bean.getDate()).substring(11);
             dateList.add(date);
+            spo2.add(new Entry(i, bean.getSpo2()));
+            heart.add(new Entry(i, bean.getHeartRate()));
+            resp.add(new Entry(i, bean.getRespRate()));
+            plus.add(new Entry(i, bean.getPlusRate()));
+            temperature.add(new Entry(i, bean.getTemperature()));
         }
+        Log.e("zbf", dateList.toString());
         //初始化X轴
         xInit();
         //初始化Y轴
