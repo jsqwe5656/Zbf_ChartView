@@ -1,6 +1,5 @@
 package com.example.administrator.zbf_chartview;
 
-import android.net.Uri;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +14,7 @@ public class MainActivity extends AppCompatActivity
 
     private Button btn_replace;
     private Button btn_replace2;
+    private Button btn_replace3;
 
     private BlankFragment f1;
     private BlankFragment2 f2;
@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity
         fragmentInit();
     }
 
+
+
     /**
      * 视图初始化
      */
     private void viewInit() {
-        ln_replace = (LinearLayout) findViewById(R.id.ln_replace);
-        btn_replace = (Button) findViewById(R.id.btn_replace);
+        ln_replace =  findViewById(R.id.ln_replace);
+        btn_replace =  findViewById(R.id.btn_replace);
         btn_replace.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -42,12 +44,21 @@ public class MainActivity extends AppCompatActivity
                 f1Init();
             }
         });
-        btn_replace2 = (Button) findViewById(R.id.btn_replace2);
+        btn_replace2 =  findViewById(R.id.btn_replace2);
         btn_replace2.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
                 f2Init();
+            }
+        });
+
+        btn_replace3 =  findViewById(R.id.btn_replace3);
+        btn_replace3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                showPrgDlgTAnim();
             }
         });
     }
@@ -106,5 +117,13 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    private void showPrgDlgTAnim() {
+        new HProgressDialog(MainActivity.this)
+                .withMsg("请稍后...")
+                .tweenAnim(R.drawable.progress_roate, R.anim.prg_anim_tween)
+                .outsideCancelable(false)
+                .cancelable(true)
+                .show();
+    }
 
 }

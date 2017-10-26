@@ -11,8 +11,9 @@
     <LinearLayout
         android:id="@+id/ln_replace"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_replace2"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
@@ -20,17 +21,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/ln_replace"
-        app:layout_constraintVertical_bias="1.0"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="463dp"/>
 
     <Button
         android:id="@+id/btn_replace2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click me2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="463dp"/>
+
+    <Button
+        android:id="@+id/btn_replace3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click me3"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_replace"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"/>
 
     <android.support.constraint.Guideline

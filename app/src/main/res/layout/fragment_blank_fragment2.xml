@@ -1,13 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.example.administrator.zbf_chartview.BlankFragment2">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.example.administrator.zbf_chartview.BlankFragment2">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/fg2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ea4f4e"
         android:text="@string/hello_blank_fragment"/>
 
-</FrameLayout>
+    <NumberPicker
+        android:id="@+id/picker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <NumberPicker
+        android:id="@+id/picker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <NumberPicker
+        android:id="@+id/picker3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

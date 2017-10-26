@@ -26,42 +26,42 @@ public class CoupleChartGestureListener implements OnChartGestureListener
 
     @Override
     public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartGestureEnd(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartLongPressed(MotionEvent me) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartDoubleTapped(MotionEvent me) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartSingleTapped(MotionEvent me) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartScale(MotionEvent me, float scaleX, float scaleY) {
-
+        syncCharts();
     }
 
     @Override
     public void onChartTranslate(MotionEvent me, float dX, float dY) {
-
+        syncCharts();
     }
 
     public void syncCharts() {
